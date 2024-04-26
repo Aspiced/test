@@ -90,6 +90,9 @@
     <video autoplay muted loop id="background-video6">
         <source src="ind.mp4" type="video/mp4">
     </video>
+    <video autoplay muted loop id="background-video7">
+        <source src="ukr.mp4" type="video/mp4">
+    </video>
     <main>
         <div class="usa sizing" id="usa"><img src="usa.png" alt=""></div>
         <div class="uk sizing" id="uk"><img src="uk.png" alt=""></div>
@@ -102,6 +105,7 @@
         <div class="china sizing"><img src="china.png" alt=""></div>
         <div class="japan sizing"><img src="japan.png" alt=""></div>
         <div class="turkey sizing"><img src="turkey.png" alt=""></div>
+        <div class="ukraine sizing" id="ukr"><img src="ukraine.png" alt=""></div>
     </main>
     <script>
         let usaFlag = document.getElementById("usa");
@@ -110,12 +114,14 @@
         let rusFlag = document.getElementById("rus");
         let gerFlag = document.getElementById("ger");
         let indFlag = document.getElementById("ind");
+        let ukrFlag = document.getElementById("ukr")
         let bv = document.getElementById("background-video");
         let bv2 = document.getElementById("background-video2");
         let bv3 = document.getElementById("background-video3");
         let bv4 = document.getElementById("background-video4");
         let bv5 = document.getElementById("background-video5");
         let bv6 = document.getElementById("background-video6");
+        let bv7 = document.getElementById("background-video7");
         usaFlag.addEventListener("mouseover", function(){
             disable();
             bv.style.display = "block";
@@ -146,6 +152,11 @@
             bv6.style.display = "block";
             ind.style.border = "2px solid black"
         });
+        ukrFlag.addEventListener("mouseover", function(){
+            disable();
+            bv7.style.display = "block";
+            ukr.style.border = "2px solid black"
+        });
         function disable(){
             bv4.style.display = "none";
             bv3.style.display = "none";
@@ -153,12 +164,14 @@
             bv2.style.display = "none";
             bv5.style.display = "none";
             bv6.style.display = "none";
+            bv7.style.display = "none";
             usa.style.border = "none"
             sweden.style.border = "none"
             rus.style.border = "none"
             uk.style.border = "none"
             ger.style.border = "none"
             ind.style.border = "none"
+            ukr.style.border = "none"
         }
     </script>
 </body>
