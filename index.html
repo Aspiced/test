@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        main{
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            position: relative;
+        }
+        .sizing{
+            
+            
+            margin-top: 100px;
+            text-align: center;
+
+        }
+        #background-video {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        }
+        #background-video2 {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        }
+        #background-video3 {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        }
+        #background-video4 {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        }
+    </style>
+</head>
+<body class="body">
+    <video autoplay muted loop id="background-video">
+        <source src="usa.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop id="background-video2">
+        <source src="videoplayback.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop id="background-video3">
+        <source src="uk.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop id="background-video4">
+        <source src="rus.mp4" type="video/mp4">
+    </video>
+    
+    <main>
+        <div class="usa sizing" id="usa"><img src="usa.png" alt=""></div>
+        <div class="uk sizing" id="uk"><img src="uk.png" alt=""></div>
+        <div class="russia sizing" id="rus"><img src=".russia.png" alt=""></div>
+        <div class="sweden sizing" id="sweden"><img src="sweden.png" alt=""></div>
+        <div class="germany sizing"><img src="germany.png" alt=""></div>
+        <div class="france sizing"><img src="france.png" alt=""></div>
+        <div class="spain sizing"><img src="spain.png" alt=""></div>
+        <div class="italy sizing"><img src="india.png" alt=""></div>
+        <div class="china sizing"><img src="china.png" alt=""></div>
+        <div class="japan sizing"><img src="japan.png" alt=""></div>
+        <div class="turkey sizing"><img src="turkey.png" alt=""></div>
+    </main>
+    <script>
+        let usaFlag = document.getElementById("usa");
+        let sweFlag = document.getElementById("sweden");
+        let ukFlag = document.getElementById("uk");
+        let rusFlag = document.getElementById("rus");
+        let bv = document.getElementById("background-video");
+        let bv2 = document.getElementById("background-video2");
+        let bv3 = document.getElementById("background-video3");
+        let bv4 = document.getElementById("background-video4");
+        usaFlag.addEventListener("mouseover", function(){
+            disable();
+            bv.style.display = "block";
+            usa.style.border = "2px solid black"
+        });
+        sweFlag.addEventListener("mouseover", function(){
+            disable();
+            bv2.style.display = "block";
+            sweden.style.border = "2px solid black"
+        });
+        ukFlag.addEventListener("mouseover", function(){
+            disable();
+            bv3.style.display = "block";
+            uk.style.border = "2px solid black"
+        });
+        rusFlag.addEventListener("mouseover", function(){
+            disable();
+            bv4.style.display = "block";
+            rus.style.border = "2px solid black"
+        });
+        function disable(){
+            bv4.style.display = "none";
+            bv3.style.display = "none";
+            bv.style.display = "none";
+            bv2.style.display = "none";
+            usa.style.border = "none"
+            sweden.style.border = "none"
+            rus.style.border = "none"
+            uk.style.border = "none"
+        }
+    </script>
+</body>
+</html>
