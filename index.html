@@ -53,6 +53,14 @@
         min-width: 100%; 
         min-height: 100%;
         }
+        #background-video5 {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        }
     </style>
 </head>
 <body class="body">
@@ -68,13 +76,15 @@
     <video autoplay muted loop id="background-video4">
         <source src="rus.mp4" type="video/mp4">
     </video>
-    
+    <video autoplay muted loop id="background-video5">
+        <source src="ger.mp4" type="video/mp4">
+    </video>
     <main>
         <div class="usa sizing" id="usa"><img src="usa.png" alt=""></div>
         <div class="uk sizing" id="uk"><img src="uk.png" alt=""></div>
         <div class="russia sizing" id="rus"><img src="russia.png" alt=""></div>
         <div class="sweden sizing" id="sweden"><img src="sweden.png" alt=""></div>
-        <div class="germany sizing"><img src="germany.png" alt=""></div>
+        <div class="germany sizing" id="ger"><img src="germany.png" alt=""></div>
         <div class="france sizing"><img src="france.png" alt=""></div>
         <div class="spain sizing"><img src="spain.png" alt=""></div>
         <div class="italy sizing"><img src="india.png" alt=""></div>
@@ -87,10 +97,12 @@
         let sweFlag = document.getElementById("sweden");
         let ukFlag = document.getElementById("uk");
         let rusFlag = document.getElementById("rus");
+        let gerFlag = document.getElementById("ger");
         let bv = document.getElementById("background-video");
         let bv2 = document.getElementById("background-video2");
         let bv3 = document.getElementById("background-video3");
         let bv4 = document.getElementById("background-video4");
+        let bv5 = document.getElementById("background-video5");
         usaFlag.addEventListener("mouseover", function(){
             disable();
             bv.style.display = "block";
@@ -111,15 +123,22 @@
             bv4.style.display = "block";
             rus.style.border = "2px solid black"
         });
+        gerFlag.addEventListener("mouseover", function(){
+            disable();
+            bv5.style.display = "block";
+            ger.style.border = "2px solid black"
+        });
         function disable(){
             bv4.style.display = "none";
             bv3.style.display = "none";
             bv.style.display = "none";
             bv2.style.display = "none";
+            bv5.style.display = "none";
             usa.style.border = "none"
             sweden.style.border = "none"
             rus.style.border = "none"
             uk.style.border = "none"
+            ger.style.border = "none"
         }
     </script>
 </body>
